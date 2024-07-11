@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose your charecter</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .selected {
+            border: 5px solid blue;
+        }
+    </style>
+    <!-- Firebase App (the core Firebase SDK) -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <!-- Firebase Storage -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Choose Your Character</h1>
+        <div class="photo-container">
+            <img id="capturedPhoto" alt="Captured Photo">
+        </div>
+        <div class="target-images">
+            <!-- <h3>Choose Your Target Image</h3> -->
+            <div class="image-options" id="imageOptions"></div>
+        </div>
+        <div class="button-container">
+            <button id="swap">Swap Faces</button>
+            <button id="backButton">Retake</button>
+        </div>
+    </div>
+    <script src="display.js"></script>
+</body>
+</html>

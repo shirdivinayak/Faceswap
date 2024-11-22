@@ -3,39 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Face Swap - Display</title>
+    <title>Choose your charecter</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         .selected {
-            border: 2px solid blue;
+            border: 5px solid blue;
         }
     </style>
+    <!-- Firebase App (the core Firebase SDK) -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <!-- Firebase Storage -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
 </head>
 <body>
     <div class="container">
-        <h1>Face Swap - Display</h1>
+        <h1>Choose Your Character</h1>
         <div class="photo-container">
             <img id="capturedPhoto" alt="Captured Photo">
         </div>
         <div class="target-images">
-            <h2>Select Target Image:</h2>
-            <div class="image-options">
-                <div class="image-option">
-                    <img src="/assets/captain.jpeg" alt="Target Image 1" class="target-image" data-src="/assets/captain.jpeg">
-                </div>
-                <div class="image-option">
-                    <img src="/assets/superman.jpeg" alt="Target Image 2" class="target-image" data-src="/assets/superman.jpeg">
-                </div>
-                <div class="image-option">
-                    <img src="/assets/jack.jpeg" alt="Target Image 3" class="target-image" data-src="/assets/jack.jpeg">
-                </div>
-                <div class="image-option">
-                    <img src="/assets/monalisa.jpeg" alt="Target Image 4" class="target-image" data-src="/assets/monalisa.jpeg">
-                </div>
-            </div>
+            <!-- <h3>Choose Your Target Image</h3> -->
+            <div class="image-options" id="imageOptions"></div>
         </div>
         <div class="button-container">
             <button id="swap">Swap Faces</button>
+            <button id="backButton">Retake</button>
         </div>
     </div>
     <script src="display.js"></script>
